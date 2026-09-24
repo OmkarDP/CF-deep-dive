@@ -1,0 +1,34 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform lock file (optional, but keep consistent)
+# .terraform.lock.hcl
+
+# Variable definitions with secrets
+*.tfvars
+*.tfvars.json
+
+# Private Keys and Certificates
+*.pem
+*.key
+*.pkcs12
+*.pfx
+cf-signed-url/private_key.pem
+
+# Environment & Secret files
+.env
+.env.*
+
+# OS and IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

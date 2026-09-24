@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Dashboard</title>
+</head>
+
+<body>
+
+    <h1>Dashboard</h1>
+
+    <h2 id="user"></h2>
+
+    <p>Account Type: Premium</p>
+
+    <p>Last Login:
+        <span id="time"></span>
+    </p>
+
+    <p>
+        Sensitive Data:
+        ₹50,000 Balance
+    </p>
+
+    <script>
+
+        const params = new URLSearchParams(
+            window.location.search
+        );
+
+        let username =
+            params.get("user") || "Guest";
+
+        document.getElementById("user")
+            .innerText =
+            "Welcome " + username;
+
+        document.getElementById("time")
+            .innerText =
+            new Date();
+
+        console.log(
+            "Dashboard loaded for:",
+            username
+        );
+
+        console.log(
+            "Cookies:",
+            document.cookie
+        );
+
+    </script>
+
+</body>
+
+</html>
